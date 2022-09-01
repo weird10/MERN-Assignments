@@ -1,0 +1,17 @@
+1. 	Tesla
+ 	Mercedes
+
+2. 	Error. ReferenceError: name is undefined.
+
+
+3. 	12345 
+     	undefined
+
+4.  	False
+	True
+
+5.	value
+	[1,5,1,8,3,3]
+	1
+	5
+		

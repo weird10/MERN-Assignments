@@ -1,0 +1,65 @@
+	⁃	use my_first_db
+
+	⁃	db.createCollection('students')
+
+	⁃	db.students.insert({name: 'Richard', home_state: 'California',			
+		lucky_number:12,birthday:{month:10, day:10,year:1985}})
+
+	⁃	db.students.insert({name: 'Bob', home_state: 'Chicago', lucky_number: 
+		5 ,birthday:{month:08, day: 03 ,year:1995}})
+
+	⁃	db.students.insert({name: 'Beth', home_state: 'Washington', 
+		lucky_number: 12,birthday:{month:01, day: 20 ,year:1980}})
+
+	⁃	db.students.insert({name: ‘Adam’, home_state: ‘Ohio’, lucky_number:7, 
+		birthday:{month:03, day: 06 ,year:1983}})
+
+	⁃	db.students.insert({name: ‘Lily’, home_state: ‘Hawaii’, 	
+		lucky_number:9, birthday:{month:09, day: 16 ,year:1982}})
+
+	⁃	db.students.find({})
+
+	⁃	db.students.find({home_state:”California”})
+
+	⁃	db.students.find({home_state:”Washington”})
+
+	⁃	db.students.find({state:”California”})
+
+	⁃	db.students.find({lucky_number: {$gt:3}})
+
+	⁃	db.students.find({lucky_number: {$lte:10}})
+
+	⁃	db.students.find({lucky_number: {$gte:1, $lte:9}})
+
+	⁃	db.students.updateMany({},{$set: {coding:””, brunch:"", MongoDB:""}})
+	⁃	
+	⁃	db.students.update({name:'Richard'}, {$set: {interest:[“Sword 
+		Fighting”]}})
+	⁃	db.students.update({name:'Beth'}, {$set: {interest:[“Coding”]}})
+	⁃	db.students.update({name:'Bob'}, {$set: {interest:[”Table Hockey”]}})
+	⁃	db.students.update({name:'Lily'}, {$set: {interest:[“Cycling”]}})
+	⁃	db.students.update({name:'Adam'}, {$set: {interest:[“Swimming”]}})
+
+	⁃	db.students.update({name:'Adam'}, {$push: {interest:”Taxes”}})
+
+	⁃	db.students.update({name:'Adam'}, {$pop: {interest:1}}))
+
+	⁃	db.students.remove({home_state:"California"})
+
+	⁃	db.students.remove({name:"Lily"})
+
+	⁃	db.students.remove({lucky_number:{$gt:5}}, true
+
+	⁃	db.students.updateMany({},{$set: {number_of_belts:0}})
+
+	⁃	db.students.updateMany({home_state:'Washington'}, {$set: 
+		{"number_of_belts":1}})
+
+	⁃	db.students.updateMany({},{$rename:
+		{"number_of_belts":"belts_earned"}})
+
+	⁃	db.students.updateMany({},{$unset: {lucky_number:''}})
+
+	⁃	db.students.updateMany({},{$currentDate: {updated_on:true}})
+
+

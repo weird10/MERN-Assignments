@@ -19,12 +19,17 @@ const createProduct = (req,res) => {
         .catch(err=> console.log(err))
     }
 
-    // const getOneProduct = 
+    const getOneProduct = (req, res) => {
+        Product.findOne({_id:req.params.id})
+        .then(thisProd => res.json(thisProd))
+        .catch(err => res.json(err))
+    }
 
 
 
 module.exports = {
     index,
     createProduct,
-    getAllProducts
+    getAllProducts,
+    getOneProduct
 }
